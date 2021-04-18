@@ -1,0 +1,74 @@
+[
+  {
+    "username": "bob@email.com",
+    "password": "121",
+    "name": "Bob Builder",
+    "age": 42,
+    "accounts": [
+      {
+        "accountNumber": 111222333,
+        "balance": 750000,
+        "overdraft": 300,
+        "type": "Credit"
+      },
+      {
+        "accountNumber": 123456789,
+        "balance": 100,
+        "overdraft": 0,
+        "type": "Cheque"
+      }
+    ]
+  },
+  {
+    "username": "jiminy@email.com",
+    "password": "123",
+    "name": "Jiminy cricket",
+    "age": 27,
+    "accounts": [
+      {
+        "accountNumber": 987654321,
+        "balance": 200,
+        "overdraft": 100000,
+        "type": "Credit"
+      },
+      {
+        "accountNumber": 41455585,
+        "balance": 100,
+        "overdraft": 500,
+        "type": "Cheque"
+      }
+    ]
+  },
+  {
+    "username": "musa",
+    "password": "123",
+    "name": "Nomsa Mnguni",
+    "age": 29,
+    "accounts": [
+      {
+        "accountNumber": 445,
+        "balance": 2058,
+        "overdraft": 1000,
+        "type": "Credit"
+      },
+      {
+        "accountNumber": 556,
+        "balance": 2058,
+        "overdraft": 1000,
+        "type": "Cheque"
+      },
+      {
+        "accountNumber": 77858596,
+        "balance": 1256,
+        "overdraft": 0,
+        "type": "Saving"
+      },
+      {
+        "accountNumber": 1236596,
+        "balance": 458,
+        "overdraft": 100,
+        "type": "Bond"
+      }
+    ]
+  }
+]

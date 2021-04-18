@@ -1,0 +1,16 @@
+ <mat-card class="container p-2">
+  <mat-card-title class="pb-2"> Welcome <b> {{userData.name}}</b></mat-card-title>
+   <mat-divider></mat-divider>
+   <mat-card-subtitle class="pt-2 pb-2">Profile Details</mat-card-subtitle>
+   <mat-label>Logged in at</mat-label>
+    <table class="p-4 table-striped w-100">
+     <tr>
+      <td colspan="3">
+        <app-account-details></app-account-details>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3"><app-logout></app-logout></td>
+    </tr>
+  </table>
+</mat-card>

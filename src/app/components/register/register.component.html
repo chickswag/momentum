@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="card login-form">
+    <div class="card-body">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input minlength="3" type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+        <label for="fullnames">Fullnames</label>
+        <input minlength="3" type="text" formControlName="fullnames" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fullnames.errors }" />
+        <div *ngIf="submitted && f.fullnames.errors" class="invalid-feedback">
+          <div *ngIf="f.fullnames.errors.required">Fullnames is required</div>
+        </div>
+       </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" formControlName="age" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.age.errors }" />
+          <div *ngIf="submitted && f.age.errors" class="invalid-feedback">
+            <div *ngIf="f.age.errors.required">Age is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Account type</mat-label>
+            <mat-select formControlName="account_type" name="account_type">
+              <mat-option value="savings">Saving</mat-option>
+              <mat-option value="bond">Bond</mat-option>
+              <mat-option value="credit">Credit</mat-option>
+              <mat-option value="cheque">Cheque</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+        <div class="form-group">
+          <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Register
+          </button>
+        </div>
+      </form>
+      <div class="sign-up">
+        Already have an account? <a routerLink="/signin">Login</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
