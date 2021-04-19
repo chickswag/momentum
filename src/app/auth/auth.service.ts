@@ -54,11 +54,12 @@ export class AuthService {
       )
   }
   isAuthenticated() {
-    return localStorage.getItem('currentUser') != null;
+    const logged = localStorage.getItem('currentUser');
+    return !!logged;
+
   }
   logout() {
     localStorage.removeItem('currentUser');
     localStorage.removeItem('account_number');
-
   }
 }

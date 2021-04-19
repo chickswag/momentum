@@ -25,7 +25,9 @@ export class WithdrawComponent implements OnInit {
   };
   constructor(private router: Router, private auth: AuthService, private formBuilder: FormBuilder,private alerts: AlertService)
   {
-
+    if(!this.auth.isAuthenticated()) {
+      this.router.navigate(['/login'])
+    }
   }
 
   ngOnInit() {

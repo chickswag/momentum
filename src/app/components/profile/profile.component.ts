@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AlertService} from "../../_alert";
+import {Router} from "@angular/router";
+import {AuthService} from "../../auth/auth.service";
+import {FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'app-profile',
@@ -12,8 +15,10 @@ export class ProfileComponent implements OnInit {
     autoClose: true,
     keepAfterRouteChange: false
   };
-  constructor(private alerts : AlertService) {
-
+  constructor(private router: Router, private auth: AuthService, private formBuilder: FormBuilder,private alerts: AlertService) {
+    if(!this.auth.isAuthenticated()) {
+      this.router.navigate(['/login'])
+    }
   }
 
   ngOnInit(): void {

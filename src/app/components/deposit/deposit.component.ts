@@ -23,19 +23,24 @@ export class DepositComponent implements OnInit{
     autoClose: true,
     keepAfterRouteChange: false
   };
+  isLoggedIn = false
 
   constructor(private router: Router,
               private auth: AuthService,
               private formBuilder: FormBuilder,
               private alerts : AlertService
   )
-  {}
+  {
+    if(!this.auth.isAuthenticated()) {
+    this.router.navigate(['/login'])
+  }}
 
   ngOnInit() {
     this.depositForm = this.formBuilder.group({
       amount: ['', Validators.required]
     });
   }
+
 
   get f() { return this.depositForm.controls; }
 

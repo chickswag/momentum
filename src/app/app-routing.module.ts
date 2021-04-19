@@ -8,7 +8,7 @@ import {AuthGuard} from "./auth/auth.guard";
 import {RegisterComponent} from "./components/register/register.component";
 
 const routes: Routes = [
-  { path: '', component: SigninComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', component: SigninComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'deposit', component: DepositComponent },
